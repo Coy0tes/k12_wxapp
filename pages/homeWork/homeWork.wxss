@@ -1,0 +1,2 @@
+/* pages/homeWork/homeWork.wxss */
+@import "../../compoment/list/list.wxss"

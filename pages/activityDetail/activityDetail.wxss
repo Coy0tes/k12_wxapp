@@ -1,0 +1,12 @@
+/* pages/activityDetail/activityDetail.wxss */
+.title{
+  text-align: center;
+  display: block;
+  font-size: 40rpx;
+  color: #000000;
+  margin-top: 20rpx;
+}
+
+.content{
+  white-space: pre-wrap;
+}

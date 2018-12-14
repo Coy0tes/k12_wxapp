@@ -1,0 +1,86 @@
+/* pages/login/login.wxss */
+
+.top{
+  height: 500rpx;
+  width: 100%;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top image{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.loginBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx 0;
+}
+
+.inputNumber{
+  background-color: #B8D2F7;
+  text-align: center;
+  width: 400rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  /* width: cale(100% - 200rpx); */
+  font-size: 32rpx;
+}
+
+.inputPass{
+  background-color: #DAFBF4;
+  text-align: center;
+  width: 400rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  font-size: 32rpx;
+}
+
+.listLeft{
+  width: 130rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loginBtn{
+  margin-top: 40rpx;
+  width: 100%;
+}
+
+.loginBtn button{
+  width: 600rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #63AFFC;
+  color: #ffffff;
+}
+
+.bottom {
+  width: 90%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.bottom view{
+  margin: 0 5%;
+}

@@ -1,0 +1,8 @@
+<!--pages/opinion/opinion.wxml-->
+<form report-submit='true' bindsubmit='send' >
+  <view class='box'>
+    <view class='title'>留下您宝贵的意见，我们将认真对待您的每个问题：</view>
+    <textarea class='opinion' bindinput='change'></textarea>
+    <button class='btn' form-type='submit' >提交</button>
+  </view>
+</form>

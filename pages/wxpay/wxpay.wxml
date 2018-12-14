@@ -1,0 +1,8 @@
+<!--pages/wxpay/wxpay.wxml-->
+<form report-submit='true' bindsubmit='pay'>
+  <view class='container'>
+    <text>购买班级直播视频</text>
+    <view class='money'>199元</view>
+    <button form-type='submit'>确认支付</button>
+  </view>
+</form>

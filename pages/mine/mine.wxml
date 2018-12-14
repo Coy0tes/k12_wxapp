@@ -1,0 +1,20 @@
+
+<view class='myInformation'>
+  <view class='headImg'>
+    <view style='background-image: url({{avatar}})'></view>
+  </view>
+  <view class='name'>
+    <view class='nickname'>
+      <view>{{username}}</view>
+    </view>
+    <view class='mobile'>{{mobile}}</view>
+  </view>
+</view>
+<view class='other'>
+  <block wx:for="{{list}}" wx:key="index">
+    <view class='list' bindtap='go' data-path="{{item.path}}">
+      <image></image>
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+</view>

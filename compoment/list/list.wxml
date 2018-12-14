@@ -1,0 +1,11 @@
+<template name="list">
+  <view class='activityBox'>
+    <view class='activityList' data-id="{{index}}" bindtap='activityDetail' wx:for="{{activity}}" wx:key="index">
+      <!-- <view class='imageBox'><image src='{{item.imageSrc}}'></image></view> -->
+      <view class='contentBox'>
+        <text class='title'>{{item.title}}</text>
+        <text class='time'>{{item.createdAt}}</text>
+      </view>
+    </view>
+  </view>
+</template>

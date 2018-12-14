@@ -1,0 +1,48 @@
+
+.activityBox{
+  display: flex;
+  flex-direction: column;
+  padding-left: 20rpx;
+}
+
+.activityBox .activityList{
+  display: flex;
+  flex-direction: row;
+  height: 140rpx;
+  align-items: center;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #cccccc;
+}
+
+.activityBox .activityList .imageBox{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20rpx;
+  overflow: hidden;
+}
+
+.activityBox .activityList .imageBox image{
+  width: 100%;
+  height: 100%;
+}
+
+.activityBox .activityList .contentBox{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentBox .title{
+  font-size: 36rpx;
+  word-break: normal;
+}
+.contentBox .time{
+  font-size: 32rpx;
+  color: #cccccc;
+  margin-top: 10rpx;
+}

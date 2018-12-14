@@ -1,0 +1,26 @@
+/* pages/plan/plan.wxss */
+@import "../../compoment/list/list.wxss";
+
+page{
+  /* background-color: #e6e6e6; */
+}
+
+.planTime{
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+
+.planTime view{
+  width: 50%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.planTime .active{
+  border-bottom: 2px solid #87CEFA;
+}

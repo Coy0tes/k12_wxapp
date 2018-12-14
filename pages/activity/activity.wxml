@@ -1,0 +1,4 @@
+<import src="../../compoment/list/list.wxml"/>
+<view>
+  <template is="list" data="{{ activity }}" />
+</view>

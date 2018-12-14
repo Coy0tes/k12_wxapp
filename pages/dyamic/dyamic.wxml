@@ -1,0 +1,7 @@
+<form class='bigForm' report-submit='true' bindsubmit='getFormId'>
+  <view catchtap='getFormId'>
+    <view>
+      <web-view src="{{WebSrc}}">正在跳转，请稍候</web-view>
+    </view>
+  </view>
+</form>

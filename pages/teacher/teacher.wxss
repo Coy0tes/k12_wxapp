@@ -1,0 +1,28 @@
+/* pages/teacher/teacher.wxss */
+
+.list {
+  display: flex;
+  flex-direction: row;
+  height: 120rpx;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #ccc;
+  padding-left: 20rpx;
+}
+
+.left {
+  width: 160rpx;
+}
+
+.name {
+  font-size: 36rpx;
+  word-break: normal;
+}
+
+.mobile {
+  font-size: 32rpx;
+  color: #646464;
+  /* margin-top: 10rpx; */
+  margin-right: 20rpx;
+}

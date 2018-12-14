@@ -1,0 +1,9 @@
+<import src="../../compoment/list/list.wxml"/>
+<!-- <form class='bigForm' report-submit='true' bindsubmit='getFormId'> -->
+  <!-- <button class='btn' form-type='submit'> -->
+    <!-- <view> -->
+      <template is="list" data="{{ activity }}" />
+    <!-- </view> -->
+  <!-- </button> -->
+<!-- </form> -->
+

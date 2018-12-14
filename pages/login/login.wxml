@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class='top' style='background-image: url({{logoBgImg}})'>
+  <image src='https://www.k12soft.net/kdweb/img/logo.png'></image>
+</view>
+<view class='loginBox'>
+  <view class='list'>
+    <view class='listLeft'>用户名</view>
+    <view><input class='inputNumber' placeholder='请输入手机号' bindinput="bindValueMobile" bindblur='vaildMobile' type='number'>{{mobile}}</input></view>
+  </view>
+  <view class='list'>
+    <view class='listLeft'>密码</view>
+    <view><input class='inputPass' placeholder='请输入密码' bindinput="bindValuePassword" bindblur='vaildPassword' password='true'>{{password}}</input></view>
+  </view>
+  <view class='loginBtn'><button bindtap='login'>登录</button></view>
+  <view class='bottom'>
+    <view bindtap='toRegist'>注册</view>
+    <view bindtap='toForget'>忘记密码</view>
+  </view>
+</view>

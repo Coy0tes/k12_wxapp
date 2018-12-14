@@ -1,0 +1,13 @@
+<!--pages/teacher/teacher.wxml-->
+<!-- <form class='bigForm' report-submit='true' bindsubmit='getFormId'> -->
+  <!-- <button class='btn' form-type='submit'> -->
+    <!-- <view> -->
+      <block wx:for="{{list}}" wx:key="index">
+        <view class='list'>
+          <view class='name'>{{item.actor.user.username}}</view>
+          <view class='mobile'>{{item.actor.user.mobile}}</view>
+        </view>
+      </block>
+    <!-- </view> -->
+  <!-- </button> -->
+<!-- </form> -->

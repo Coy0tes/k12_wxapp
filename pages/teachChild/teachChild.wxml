@@ -1,0 +1,43 @@
+<view>
+  <view class='top'>
+    <view class='Nav'>
+      <block wx:for="{{topNav}}" wx:key="key">
+        <view bindtap='navTab' data-index="{{index}}" style="background-image:url({{item.imageSrc}})">
+          <view>{{item.title1}}</view>
+          <view wx:if="{{item.title2}}">{{item.title2}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='split'></view>
+  <view class='slide'>
+    <view class='hot'>
+      <image src='../../images/hot.png'></image>
+      <view>热门推荐</view>
+    </view>
+    <view class='slider'>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item>
+            <image src="{{item}}" data-index='{{index}}' bindtap='ImgTap' class="slide-image" width="350" height="150" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="boStory">
+    <block wx:for="{{boStory}}" wx:key="key">
+      <view class='lis'>
+        <view class='left'>
+          <view class='circle'></view>
+          <view>Bo故事 |  {{item.name}}</view>
+        </view>
+        <view class='right'>
+          <view>点击收听</view>
+          <view class='jiantou'>></view>
+        </view>
+      </view>
+      <view class='split2'></view>
+    </block>
+  </view>
+</view>

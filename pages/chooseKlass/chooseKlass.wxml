@@ -1,0 +1,36 @@
+<form report-submit='true' bindsubmit='submit'>
+  <view class='box'>
+    <view class='name'>
+      <view class='circleG'></view>
+      <text>姓名</text>
+      <view class='check'>
+        <input type='text' bindinput='changeName' value='{{username}}'></input>
+      </view>
+    </view>
+    <view class='name'>
+      <view class='circleB'></view>
+      <text>班级</text>
+      <view class='check check2'>
+        <view class="section">
+          <picker bindchange="klassChange" value="{{index}}" range="{{arr}}">
+            <view class="picker">
+              {{arr[index]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class='name'>
+      <view class='circleG'></view>
+      <text>关系</text>
+      <view class='check'>
+        <picker bindchange="relationChange" value="{{index2}}" range="{{arr2}}">
+          <view class="picker">
+            {{arr2[index2]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <button class='submit' form-type='submit'>注册</button>
+  </view>
+</form>

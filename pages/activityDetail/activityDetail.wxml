@@ -1,0 +1,12 @@
+
+<import src="../../wxParse/wxParse.wxml"/>
+<!-- <form class='bigForm' report-submit='true' bindsubmit='getFormId'> -->
+  <!-- <button class='btn' form-type='submit'> -->
+    <view>
+      <text class='title'>{{title}}</text>
+      <view class='content'>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view>
+    </view>
+  <!-- </button> -->
+<!-- </form> -->

@@ -1,0 +1,70 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/login",
+    "pages/forget/forget",
+    "pages/attendance/attendance",
+    "pages/teacher/teacher",
+    "pages/children/children",
+    "pages/regist/regist",
+    "pages/homeWork/homeWork",
+    "pages/cookBook/cookBook",
+    "pages/plan/plan",
+    "pages/activity/activity",
+    "pages/activityDetail/activityDetail",
+    "pages/notice/notice",
+    "pages/kindergartenHub/kindergartenHub",
+    "pages/dyamic/dyamic",
+    "pages/activityWeb/activityWeb",
+    "pages/information/information",
+    "pages/device/device",
+    "pages/attSeconds/attSeconds",
+    "pages/wxpay/wxpay",
+    "pages/serviceBook/serviceBook",
+    "pages/mine/mine",
+    "pages/edit/edit",
+    "pages/opinion/opinion",
+    "pages/familySchool/familySchool",
+    "pages/childDetail/childDetail",
+    "pages/medicine/medicine",
+    "pages/commitMedicine/commitMedicine",
+    "pages/medicineing/medicineing",
+    "pages/medicineHistory/medicineHistory",
+    "pages/teachChild/teachChild",
+    "pages/editChild/editChild",
+    "pages/chooseKlass/chooseKlass",
+    "pages/klassLive/klassLive"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#71A3FC",
+    "navigationBarTitleText": "青苗宝贝",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#96A5A4",
+    "selectedColor": "#6AA545",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#E7E7E7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home2.png"
+      },
+      {
+        "pagePath": "pages/teachChild/teachChild",
+        "text": "育儿专栏",
+        "iconPath": "images/yuer.png",
+        "selectedIconPath": "images/yuer2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine2.png"
+      }
+    ]
+  }
+}

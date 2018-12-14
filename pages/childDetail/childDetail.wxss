@@ -1,0 +1,256 @@
+.box{
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.childMsg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.childMsg .childImg{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.childMsg .name{
+  font-size: 44rpx;
+  color: #2f138d;
+  margin: 30rpx 0;
+}
+
+.card{
+  width: 80%;
+  height: 150rpx;
+  background-color: #8ccdf9;
+  color: #2f138d;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+
+/*
+*   active1
+*/
+
+.box .top{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  color: #2f138d;
+  font-size: 36rpx;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.box .top>view{
+  display: flex;
+  flex-direction: row;
+}
+
+.box .title{
+  width: 100%;
+  height: 90rpx;
+  border-radius: 10rpx;
+  background-color: #8ccdf9;
+  color: #0061e1;
+  font-family: "黑体";
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 90rpx;
+  margin-bottom: 30rpx;
+}
+
+.box .evaluate{
+  width: 100%;
+  padding: 28rpx 20rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #8CCCF8;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.box .evaluate>view{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: around;
+  align-items: center;
+  color: #344A5E;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.box .evaluate>view .left{
+  width: 120rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-wrap;
+}
+
+.box .evaluate>view .right{
+  width: 180rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.box .evaluate>view image{
+  width: 46rpx;
+  height: 48rpx;
+  margin-right: 10rpx;
+}
+
+.teacherEvaluate{
+  width: 100%;
+  min-height: 100rpx;
+  /* padding: 0 20rpx; */
+  box-sizing: border-box;
+  color: #FF0056;
+  font-size: 36rpx;
+  margin-bottom: 50rpx;
+}
+
+.box .title2{
+  width: 100%;
+  color: #35495E;
+  text-align: left;
+  font-size: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.parentEvaluate{
+  width: 100%;
+}
+
+.parentEvaluate textarea{
+  width: 95%;
+  height: 300rpx;
+  border-radius: 10rpx;
+  border: 1px solid #9ED4FA;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+}
+
+.parentEvaluate view{
+  padding: 0 20rpx;
+  font-size: 36rpx;
+  color: #2aa2ff;
+  line-height: 48rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+
+.submit{
+  width: 330rpx;
+  height: 76rpx;
+  background-color: #2aa2ff;
+  color: #ffffff;
+  font-family: "黑体";
+  border-radius: 10rpx;
+  line-height: 76rpx;
+  margin-bottom: 30rpx;
+}
+
+.parentEvaluate .history{
+  width: 330rpx;
+  height: 76rpx;
+  background-color: #2aa2ff;
+  color: #ffffff;
+  font-family: "黑体";
+  border-radius: 10rpx;
+  line-height: 76rpx;
+  text-align: center;
+  margin: auto;
+}
+
+/*
+*   active2
+*/
+
+.select{
+  width: 100%;
+  height: 78rpx;
+  background-color: #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select picker{
+  width: 90%;
+}
+
+.select picker view{
+  width: 100%;
+  height: 56rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  background-size: auto 70%;
+  background-position: 15rpx center;
+  background-repeat: no-repeat;
+}
+
+.select view input{
+  height: 100%;
+  line-height: 28rpx;
+  font-size: 32rpx;
+  margin-left: 60rpx;
+}
+
+.dateList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateList>view{
+  width: 100%;
+  height: 106rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #bfbfbf;
+  position: relative;
+}
+
+.dateList view:nth-child(1){
+  border-top: 1rpx solid #2aa2ff;
+}
+
+.dateList>view .count{
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #FC035D;
+  border-radius: 50%;
+  right: 10rpx;
+  top: 10rpx;
+}

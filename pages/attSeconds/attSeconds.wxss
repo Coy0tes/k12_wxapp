@@ -1,0 +1,106 @@
+.box {
+  margin-top: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box>view {
+  margin-bottom: 40rpx;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.name text {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.name .check {
+  width: 400rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  background-color: #f0e4fc;
+  font-size: 30rpx;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.temperature text {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.temperature .check {
+  width: 400rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  background-color: #f0e4fc;
+  font-size: 30rpx;
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.time text {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.time .check{
+  width: 400rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  background-color: #fbe4f9;
+  font-size: 30rpx;
+}
+
+.submit {
+  width: 500rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #6899f8;
+  font-size: 32rpx;
+  margin-top: 160rpx;
+}
+
+.circle1 {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #ffd684;
+  margin-right: 10rpx;
+}

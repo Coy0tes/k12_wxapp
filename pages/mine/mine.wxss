@@ -1,0 +1,70 @@
+page{
+  background-color: #f2f2f2;
+}
+
+.myInformation{
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  padding-left: 40rpx;
+  background-color: #ffffff;
+}
+
+.myInformation .headImg{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 1px solid #D4F2B4;
+  overflow: hidden;
+}
+
+.myInformation .headImg view{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.myInformation .name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20rpx;
+}
+
+.myInformation .name .nickname{
+  font-size: 32rpx;
+  color: #000000;
+  margin-bottom: 20rpx;
+}
+
+.myInformation .name .mobile{
+  color: #96A5A4;
+  font-size: 30rpx;
+}
+
+.other{
+  overflow: hidden;
+}
+
+.other image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.other text{
+  margin-left: 40rpx;
+}
+
+.list{
+  width: 100%;
+  height: 100rpx;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  color: #000000;
+  font-size: 32rpx;
+  align-items: center;
+  margin: 40rpx 0;
+}

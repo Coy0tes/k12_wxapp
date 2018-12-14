@@ -1,0 +1,65 @@
+<form report-submit='true' bindsubmit='submit'>
+  <view class='box'>
+    <view class='lrBox bigBox'>
+      <view class='lrBox'>
+        <view>姓名：</view>
+        <picker bindchange='bindChildChoose' value="{{childIndex}}" range="{{list}}">
+          <view class="picker textCenter">
+            {{list[childIndex]}}
+          </view>
+        </picker>
+      </view>
+      <view class='lrBox'>
+        <view>执行时间：</view>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2215-09-01" bindchange="bindDateChange">
+          <view class="picker right">
+            {{date}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view>
+      <view class='lrBox bigBox'>
+        <view>药品：</view>
+        <view class='right'>
+          <input class='InputBorder' bindinput='medicineName' type='text'></input>
+        </view>
+      </view>
+    </view>
+    <block wx:for="{{medicineDetail}}" wx:key="index">
+      <view class='lrBox bigBox' data-index="{{item.forIndex}}" bindtouchstart='start' bindtouchend='end' >
+        <view animation="{{item.animation}}">服药时间：{{index + 1}}、</view>
+        <view class='right' animation="{{item.animation}}">
+          <picker data-index="{{index}}" bindchange='bindTimeChange' value="{{item.index}}" range="{{item.time}}">
+            <view class="picker InputBorder textCenter">
+              {{item.time[item.index]}}
+            </view>
+          </picker>
+        </view>
+        <view data-index="{{index}}" class='delete' animation="{{item.animation2}}" catchtap='deleteMedicine'>删除</view>
+      </view>
+    </block>
+    <view class='add' bindtap='add'><image src='{{add}}'></image></view>
+    <view>
+      <view class='lrBox bigBox'>
+        <view>剂量：</view>
+        <view class='right'>
+          <input class='InputBorder' type='text' bindinput='timece'></input>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class='lrBox bigBox'>
+        <view>执行天数：</view>
+        <view class='right'>
+          <input class='InputBorder' type='number' bindinput='days'></input>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class='lrBox'>备注：</view>
+      <textarea bindinput='remark'></textarea>
+    </view>
+  </view>
+  <button class='submit' form-type='submit'>确认提交</button>
+</form>

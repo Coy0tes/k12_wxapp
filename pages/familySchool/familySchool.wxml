@@ -1,0 +1,19 @@
+<view class='box'>
+  <block wx:for="{{childList}}" wx:key="index">
+    <view class='list' data-index="{{index}}" bindtap='detail'>
+      <view class='childHeadImg'>
+        <view style="background-image: url(https://{{item.student.avatar == ''? noImg : item.student.avatar}})"></view>
+      </view>
+      <view class='childMes'>
+        <view class='name'>
+          <view class='childName'>{{item.student.name}}</view>
+          <view class='right'>  小朋友</view>
+        </view>
+        <view class='klass'>
+          <view class='klassName'>班级：</view>
+          <view class='right'>{{item.student.klass.name}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

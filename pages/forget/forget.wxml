@@ -1,0 +1,32 @@
+<import src="../../compoment/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<form bindsubmit="formSubmit">
+  <view class='registBox'>
+    <view>
+      <view class='left'>手机号</view>
+      <view class='right'>
+        <input name="mobile" data-mobile="mobile" bindinput='vaild' type='number' placeholder='您的手机号码'></input>
+        <view class='invat' bindtap='getInvat' style="background-color: {{canGetInvat == true? '#87CEFA' : '#d5d5d5'}}">{{invat}}</view>
+      </view>
+    </view>
+    <view>
+      <view class='left'>邀请码</view>
+      <view class='right'>
+        <input name="secretCode" data-secretcode="secretcode" bindblur='vaild' type='number' placeholder='请输入邀请码'></input>
+      </view>
+    </view>
+    <view>
+      <view class='left'>密  码</view>
+      <view class='right'>
+        <input type='password' data-password="password" bindinput='vaild' placeholder='请填写新密码'></input>
+      </view>
+    </view>
+    <view>
+      <view class='left'>确  认</view>
+      <view class='right'>
+        <input name="password" data-secpass="secpass" type='password' bindinput='vaild' placeholder='再一次输入新密码'></input>
+      </view>
+    </view>
+  </view>
+  <button class='submit' style="background-color: {{canSubmit == true? '#6899f8' : '#e5e5e5'}}" formType="submit">修  改</button>
+</form>

@@ -1,0 +1,18 @@
+<view class='bigBox'>
+  <block wx:for="{{list}}" wx:key="index">
+    <view class='box' data-index="{{index}}" bindtap='chooseChild'>
+      <view class='top'>
+        儿童 {{index + 1}}
+        <view class='edit' data-index="{{index}}" catchtap='editChild'>编辑</view>
+      </view>
+      <view class='bottom'>
+        <view class='headImg' style="background: {{item.student.avatar == ''? '#67B9FD' : 'url(https://'+ item.student.avatar +')'}}"></view>
+        <view class='right'>
+          <view>姓名： {{item.student.name}}</view>
+          <view>班级： {{item.student.klass.name}}</view>
+        </view>
+      </view>
+      <view class='active' wx:if="{{nowChildKlass == list[index].student.klass.id}}">√</view>
+    </view>
+  </block>
+</view>

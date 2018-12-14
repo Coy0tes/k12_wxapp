@@ -1,0 +1,100 @@
+<view wx:if="{{id == ''}}">
+  <block wx:for="{{data}}" wx:key="index">
+    <view class='box'>
+      <view class='topTitle'>{{item.medicineName}}</view>
+      <view class='bottomDetail'>
+        <view class='lrBox bigBox'>
+          <view class='lrBox'>
+            <view>姓名：</view>
+            <view>{{item.stuName}}</view>
+          </view>
+          <view class='lrBox'>
+            <view>执行时间：</view>
+            <view>{{item.executeTime}}</view>
+          </view>
+        </view>
+        <view>
+          <view class='lrBox'>
+            <view>药品：</view>
+            <view class='right'>{{item.medicineName}}</view>
+          </view>
+        </view>
+        <block wx:for="{{item.medicineTime}}" wx:key="key" wx:for-item="item2" wx:for-index="index2">
+          <view class='lrBox'>
+            <view>服药时间：{{index2 + 1}}、</view>
+            <view>{{item2.time}}</view>
+            <view class='hasTake' wx:if="{{item2.isTake == true}}">已打卡</view>
+            <view class='noTake' wx:if="{{item2.isTake == false}}">未打卡</view>
+          </view>
+        </block>
+        <view class='around'>
+          <view class='lrBox'>
+            <view>每次剂量：</view>
+            <view class='right'>{{item.dose}}</view>
+          </view>
+          <view class='lrBox'>
+            <view>服药天数：</view>
+            <view class='right'>{{item.days}}天</view>
+          </view>
+        </view>
+        <view class='inline'>
+          <view class='lrBox'>备注：</view>
+          <view class='other'>{{item.remark}}</view>
+        </view>
+        <view class='stop'>
+          <view data-index='{{index}}' bindtap='stopMedicine' wx:if="{{item.isStop == false}}">停止服药</view>
+          <view class='submitAgin' data-index='{{index}}' bindtap='pushAgain' wx:if="{{data.isStop == true}}">再次提交</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:else>
+  <view class='box'>
+    <view class='topTitle'>{{data.medicineName}}</view>
+    <view class='bottomDetail'>
+      <view class='lrBox bigBox'>
+        <view class='lrBox'>
+          <view>姓名：</view>
+          <view>{{data.stuName}}</view>
+        </view>
+        <view class='lrBox'>
+          <view>执行时间：</view>
+          <view>{{data.executeTime}}</view>
+        </view>
+      </view>
+      <view>
+        <view class='lrBox'>
+          <view>药品：</view>
+          <view class='right'>{{data.medicineName}}</view>
+        </view>
+      </view>
+      <block wx:for="{{data.medicineTime}}" wx:for-item="item2" wx:key="index">
+        <view class='lrBox'>
+          <view>服药时间：{{index + 1}}、</view>
+          <view>{{item2.time}}</view>
+          <view class='hasTake' wx:if="{{item2.isTake == true}}">已打卡</view>
+          <view class='noTake' wx:if="{{item2.isTake == false}}">未打卡</view>
+        </view>
+      </block>
+      <view class='around'>
+        <view class='lrBox'>
+          <view>每次剂量：</view>
+          <view class='right'>{{data.dose}}</view>
+        </view>
+        <view class='lrBox'>
+          <view>服药天数：</view>
+          <view class='right'>{{data.days}}天</view>
+        </view>
+      </view>
+      <view class='inline'>
+        <view class='lrBox'>备注：</view>
+        <view class='other'>{{data.remark}}</view>
+      </view>
+      <view class='stop'>
+        <view bindtap='stopMedicine2' wx:if="{{data.isStop == false}}">停止服药</view>
+        <view class='submitAgin' bindtap='pushAgain' wx:if="{{data.isStop == true}}">再次提交</view>
+      </view>
+    </view>
+  </view>
+</view>

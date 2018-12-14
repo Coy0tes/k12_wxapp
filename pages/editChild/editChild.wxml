@@ -1,0 +1,39 @@
+<form report-submit='true' bindsubmit='submit'>
+  <view class='box'>
+    <view class='headimg'>
+      <view bindtap='chooseImg' data-imgindex="1" class='nowImg' style="background-image:url({{imgsrc}})"></view>
+    </view>
+    <view class='name'>
+      <view class='circleG'></view>
+      <text>姓名</text>
+      <view class='check'>
+        <input type='text' bindinput='changeName' value='{{username}}'></input>
+      </view>
+    </view>
+    <view class='name'>
+      <view class='circleB'></view>
+      <text>性别</text>
+      <view class='check check2'>
+        <view class="section">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{sex}}">
+            <view class="picker">
+              {{sex[index]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class='name'>
+      <view class='circleG'></view>
+      <text>生日</text>
+      <view class='check'>
+        <picker mode="date" value="{{date}}" start="1900-09-01" end="2200-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            {{date}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <button class='submit' form-type='submit'>修改</button>
+  </view>
+</form>

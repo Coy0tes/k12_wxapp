@@ -1,0 +1,17 @@
+<view class='title'>
+  <view>姓名</view>
+  <view>日期</view>
+  <view>详情</view>
+</view>
+<view class='box'>
+  <block wx:for="{{childList}}" wx:key="index">
+    <view class='row'>
+      <view class='childImg'>
+        <view class='Img' style="background-image: url(https://{{item.avatar == ''? noImg : item.avatar}})"></view>
+        <view class='name'>{{item.stuName}}</view>
+      </view>
+      <view class='date'>{{item.date}}</view>
+      <view class='detail' data-index="{{index}}" bindtap='goDetail'>查看</view>
+    </view>
+  </block>
+</view>

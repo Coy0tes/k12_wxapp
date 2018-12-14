@@ -1,0 +1,14 @@
+<import src="../../compoment/list/list.wxml" />
+<!-- <form class='bigForm' report-submit='true' bindsubmit='getFormId'> -->
+  <!-- <button class='btn' form-type='submit'> -->
+    <!-- <view> -->
+      <view class='planTime'>
+        <view bindtap='planTime' data-id="WEEK" class="{{planType == 'WEEK'? 'active' : ''}}">周计划</view>
+        <view bindtap='planTime' data-id="MONTH" class="{{planType == 'MONTH'? 'active' : ''}}">月计划</view>
+      </view>
+      <view>
+        <template is="list" data="{{ activity }}" />
+      </view>
+    <!-- </view> -->
+  <!-- </button> -->
+<!-- </form> -->

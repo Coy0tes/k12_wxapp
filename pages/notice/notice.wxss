@@ -1,0 +1,2 @@
+/* pages/notice/notice.wxss */
+@import "../../compoment/list/list.wxss"

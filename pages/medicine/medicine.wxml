@@ -1,0 +1,5 @@
+<view class='box'>
+  <block wx:for="{{medicine}}" wx:key="index">
+    <view style="background-image:url({{item.imageSrc}})" data-url="{{item.url}}" bindtap='go'>{{item.name}}</view>
+  </block>
+</view>

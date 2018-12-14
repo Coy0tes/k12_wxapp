@@ -1,0 +1,71 @@
+<view wx:if="{{active == 0}}">
+  <view class='box'>
+    <view class='childMsg'>
+      <view class='childImg' style="background-image: url(https://{{studentMsg.student.avatar == ''? noImg : studentMsg.student.avatar}})"></view>
+      <view class='name'>{{studentMsg.student.name}}</view>
+    </view>
+    <view class='card' bindtap='thisWeek'>查看本周</view>
+    <view class='card' bindtap='historyWeek'>查看往期</view>
+  </view>
+</view>
+
+<view wx:elif="{{active == 1}}">
+  <view class='box'>
+    <view class='top'>
+      <view>
+        <!-- <view>姓名：</view> -->
+        <view class='name'>{{studentMsg.student.name}}</view>
+      </view>
+      <view>
+        <!-- <view>日期：</view> -->
+        <view>{{date}}</view>
+      </view>
+    </view>
+    <view class='title'>本周表现情况</view>
+    <view class='evaluate'>
+      <view wx:for="{{evaluate}}" wx:key="index">
+        <view class='left'>{{item.name}}</view>
+        <view class='right'>
+          <block wx:for="{{item.star}}" wx:key="index2">
+            <image src='{{star}}'></image>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class='title2'>老师的话（本周进步，学习情况）</view>
+    <view class='teacherEvaluate'>{{teacherEvaluate}}</view>
+    <view class='title2'>家长总结孩子在家的学习生活情况：</view>
+    <view class='parentEvaluate'>
+      <form report-submit='true' bindsubmit='getFormId' wx:if="{{parentEvaluate == null}}">
+        <textarea placeholder='输入内容...' bindinput='changeInput'></textarea>
+        <button class='submit' form-type='submit'>反  馈</button>
+      </form>
+      <view wx:else>{{parentEvaluate}}</view>
+      <view class='history' bindtap='historyWeek'>查看往期情况</view>
+    </view>
+  </view>
+</view>
+
+<view wx:elif="{{active == 2}}">
+  <view class='select'>
+    <picker bindchange="bindPickerChange" value="{{dateIndex}}" range="{{dateList2}}">
+      <view style='background-image: url({{selectImg}})'>
+        <input type='text' disabled='true' placeholder='搜索'></input>
+      </view>
+    </picker>
+  </view>
+  <view class='box'>
+    <view class='childMsg'>
+      <view class='childImg' style="background-image: url(https://{{studentMsg.student.avatar == ''? noImg : studentMsg.student.avatar}})"></view>
+      <view class='name'>{{studentName}}</view>
+    </view>
+    <view class='dateList'>
+      <block wx:for="{{dateList}}" wx:key="index3">
+        <view bindtap='goDate' data-date="{{item.date}}">
+          {{item.date}}
+          <view wx:if="{{item.ststus == false}}" class='count'></view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

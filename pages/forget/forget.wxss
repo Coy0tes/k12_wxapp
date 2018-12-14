@@ -1,0 +1,17 @@
+@import '../regist/regist.wxss';
+
+.right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.invat{
+  width: 200rpx;
+  height: 60rpx;
+  text-align: center;
+  background-color: #87CEFA;
+  color: #ffffff;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+}

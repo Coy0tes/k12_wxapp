@@ -1,0 +1,169 @@
+<!-- <form class='bigForm' report-submit='true' bindsubmit='getFormId'> -->
+  <!-- <button class='btn' form-type='submit'> -->
+    <!-- <view> -->
+      <view>
+        <view class='tab'>
+          <view data-id='0' class="{{active == 0? 'active' : ''}}" bindtap='choose'>宝贝签到</view>
+          <view data-id='1' class="{{active == 1? 'active' : ''}}" bindtap='choose'>签到记录</view>
+          <view data-id='2' class="{{active == 2? 'active' : ''}}" bindtap='choose'>宝贝请假</view>
+          <view data-id='3' class="{{active == 3? 'active' : ''}}" bindtap='choose'>请假记录</view>
+        </view>
+      </view>
+
+      <view wx:if="{{active == 0}}">
+        <form report-submit='true' bindsubmit='submitSign'>
+          <view class='box'>
+            <view bindtap='chooseImg' class='parentImg' style="background-image:url(https://{{parentImg == ''? noImg2 : parentImg}})"></view>
+            <view class='name'>
+              <block wx:for="{{studentInfo}}" wx:key="index">
+                <view>
+                  <view bindtap='chooseChild' class='childrenImg' data-index="{{index}}" style="background-image: url(https://{{item.avatar == ''? noImg : item.avatar}});border: {{chooseChildIndex == index? '2px solid #6899f8' : none}}"></view>
+                  <view>{{item.name}}</view>
+                </view>
+              </block>
+            </view>
+            <!-- <view class='temperature'>
+              <text>体温</text>
+              <view class='check'>
+                <view class="section">
+                  <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+                    <view class="picker">
+                      {{multiArray[0][multiIndex[0]]}}.{{multiArray[1][multiIndex[1]]}} ℃
+                    </view>
+                  </picker>
+                </view>
+              </view>
+            </view> -->
+            <button style="background-color: #6899f8" class='submit' form-type='submit'>提交</button>
+            <view class='warning'>
+              提示： 小程序出勤数据与出勤机同步，二选一使用即可。
+            </view>
+          </view>
+        </form>
+      </view>
+
+      <view wx:if="{{active == 1}}">
+        <view class='dwmSelect'>
+          <view class="section">
+            <picker data-type="day" mode="date" value="{{specialDate}}" start="2017-09-01" end="2100-09-01" bindchange="bindDayChange">
+              <view class="picker">日查询</view>
+            </picker>
+          </view>
+          <view class="section">
+            <picker data-type="周" mode="date" value="{{specialDate}}" start="2017-09-01" end="2100-09-01" bindchange="bindDateChange">
+              <view class="picker">周查询</view>
+            </picker>
+          </view>
+          <view class="section">
+            <picker data-type="月" mode="date" value="{{specialDate}}" start="2017-09-01" end="2100-09-01" bindchange="bindDateChange">
+              <view class="picker">月查询</view>
+            </picker>
+          </view>
+        </view>
+        <block wx:if="{{signData != '' && studentInfo[index].signInfo}}" wx:for="{{studentInfo}}" wx:key="index">
+          <view class='signBox' data-index="{{index}}" bindtap='openMask'>
+            <view class='studentName'>{{item.name}}</view>
+            <view class='signTime' wx:if="{{checkType == 'day'}}">
+              <view class='circle1'></view>
+              <view>{{item.signInfo.earliest}}</view>
+            </view>
+            <view class='signTime' wx:if="{{checkType == 'day'}}">
+              <view class='circle2'></view>
+              <view>{{item.signInfo.latest}}</view>
+            </view>
+            <view class='signTime' wx:if="{{checkType != 'day'}}">
+              <view class='circle1'></view>
+              <view>该{{checkType}}出勤总天数： {{acount}}天</view>
+            </view>
+          </view>
+        </block>
+      </view>
+
+      <view wx:if="{{active == 2}}" class='container2'>
+        <form report-submit='true' bindsubmit='append'>
+          <view class='leaveBox'>
+            <view class='name'>
+              <view class='circle2'></view>
+              <view class='left'>姓名</view>
+              <view class='check'>
+                <view class="section">
+                  <picker bindchange="bindPickerChange2" value="选择儿童" range="{{array}}">
+                    <view class="picker">
+                      {{array[index]}}
+                    </view>
+                  </picker>
+                </view>
+              </view>
+            </view>
+            <view class='leaveType'>
+              <view class='circle2'></view>
+              <view class='left'>类型</view>
+              <view class='check'>
+                <view class="section">
+                  <picker bindchange="bindLeavePickerChange" value="选择类型" range="{{leaveType}}">
+                    <view class="picker">
+                      {{leaveType[leaveFor]}}
+                    </view>
+                  </picker>
+                </view>
+              </view>
+            </view>
+            <view class='leaveStarTime'>
+              <view class='circle2'></view>
+              <view class='left'>开始</view>
+              <view class='check'>
+                <picker mode="multiSelector" value="{{leaveTime.dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{leaveTime.dateTimeArray1}}">
+                  <view class="tui-picker-detail">
+                    {{leaveTime.leavetime}}
+                  </view>
+                </picker>
+              </view>
+            </view>
+            <view class='leaveEndTime'>
+              <view class='circle2'></view>
+              <view class='left'>结束</view>
+              <view class='check'>
+                <picker mode="multiSelector" value="{{backTime.dateTime1}}" bindchange="changeDateTime2" bindcolumnchange="changeDateTimeColumn2" range="{{backTime.dateTimeArray1}}">
+                  <view class="tui-picker-detail">
+                    {{backTime.backtime}}
+                  </view>
+                </picker>
+              </view>
+            </view>
+            <view class='name'>
+              <view class='circle2'></view>
+              <view class='left'>说明</view>
+              <view class='cause'>
+                <textarea bindinput="bindTextArea" placeholder="输入请假原因（大于5个字）"></textarea>
+              </view>
+            </view>
+            <button class='append' style="background-color: {{hasCauseDetail == true && leaveTime.hasDetail == true && backTime.hasDetail == true? '#6798FA' : '#e5e5e5'}}" form-type='submit'>添 加</button>
+          </view>
+        </form>
+      </view>
+
+      <view wx:if="{{active == 3}}">
+        <view class='vacationsBook'>
+          <block wx:if="{{signData != ''}}" wx:for="{{vacationsBook}}" wx:for-item="item" wx:key="index">
+            <view class='signBox'>
+              <view class='studentName'>{{item.student.name}}</view>
+              <view class='reason'>{{item.reason}}</view>
+              <view class='time'>开：{{item.fromDate}}</view>
+              <view class='time'>结：{{item.toDate}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view class='mask' wx:if="{{attendanceDetail == true}}" bindtap='closeMask'>
+        <view>
+          <view class='title'>打卡详情</view>
+          <view class='childAttendanceImg' style="background-image: url(https://{{studentInfo[detailIndex].signInfo.portrait}})"></view>
+          <view>------接送时间------</view>
+          <view>最早  {{studentInfo[detailIndex].signInfo.earliest}}</view>
+          <view>最晚  {{studentInfo[detailIndex].signInfo.latest}}</view>
+        </view>
+      </view>
+    <!-- </view> -->
+  <!-- </button> -->
+<!-- </form> -->

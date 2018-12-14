@@ -1,0 +1,348 @@
+page {
+  height: 100%;
+  background-color: #fdfdfd;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.tab view {
+  width: 25%;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.active {
+  color: #87cefa;
+  border-bottom: 4rpx solid #87cefa;
+}
+
+.box {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box>view {
+  margin: 20rpx 0;
+}
+
+.parentImg {
+  width: 360rpx;
+  height: 520rpx;
+  border: 1px solid #eee;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20rpx;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 60rpx;
+}
+
+.box .name view{
+  margin: 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+}
+
+.box .name view view{
+  margin-bottom: 20rpx;
+}
+
+.name text {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.name .check {
+  width: 400rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  background-color: #f0e4fc;
+  font-size: 30rpx;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.temperature text {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.temperature .check {
+  width: 400rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  background-color: #f0e4fc;
+  font-size: 30rpx;
+}
+
+.submit {
+  width: 500rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 60rpx;
+  color: #fff;
+  text-align: center;
+  /* background-color: #6899f8; */
+  font-size: 32rpx;
+  margin-top: 20rpx;
+}
+
+.warning {
+  width: 80%;
+  margin: auto;
+  white-space: pre-line;
+  font-size: 28rpx;
+  line-height: 38rpx;
+}
+
+.dwmSelect {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.dwmSelect view {
+  font-size: 30rpx;
+  color: #fff;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 60rpx;
+  text-align: center;
+  background-color: #6899f8;
+}
+
+.signBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  height: 80rpx;
+  margin: auto;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.signBox .studentName {
+  font-size: 32rpx;
+  color: #6899f8;
+  line-height: 80rpx;
+}
+
+.signBox .signTime {
+  font-size: 24rpx;
+  color: #ccc;
+  line-height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80rpx;
+}
+
+.circle1 {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #ffd684;
+  margin-right: 10rpx;
+}
+
+.circle2 {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #feba80;
+  margin-right: 10rpx;
+}
+
+.leaveBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaveBox>view {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx 0;
+}
+
+.leaveBox .check {
+  width: 400rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  background-color: #f0e4fc;
+  font-size: 30rpx;
+}
+
+.leaveType .check {
+  background-color: #d8f7f1;
+}
+
+.leaveStarTime .check, .leaveEndTime .check {
+  background-color: #fbe4f9;
+}
+
+.name .circle2 {
+  background-color: #f0e4fc;
+}
+
+.leaveType .circle2 {
+  background-color: #87f0d2;
+}
+
+.leaveStarTime .circle2, .leaveEndTime .circle2 {
+  background-color: #fa9ffa;
+}
+
+.left {
+  margin: 0 20rpx;
+  font-size: 32rpx;
+}
+
+.cause {
+  width: 400rpx;
+  height: 160rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  border: 1px solid #daf3f2;
+}
+
+.cause textarea {
+  width: 100%;
+  height: 100%;
+}
+
+.append {
+  width: 100%;
+  height: 80rpx;
+  border-radius: 80rpx;
+  /* background-color: #6798FA; */
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 34rpx;
+}
+
+.reason {
+  font-size: 30rpx;
+  color: #000;
+}
+
+.vacationsBook .time {
+  font-size: 24rpx;
+  color: #e5e5e5;
+}
+
+.vacationsBook {
+  line-height: 80rpx;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.mask>view {
+  padding: 40rpx 80rpx;
+  background-color: #fff;
+  border: 2rpx solid #c2e5fb;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0rpx 50px #d1d1d1;
+}
+
+.mask>view .title {
+  font-size: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.mask>view view:nth-child(3) {
+  font-size: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.mask>view view:nth-child(4) {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.mask>view view:nth-child(5) {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.childAttendanceImg {
+  width: 360rpx;
+  height: 520rpx;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20rpx;
+  margin-bottom: 60rpx;
+}
+
+.childrenImg {
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #eee;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}

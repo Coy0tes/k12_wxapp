@@ -1,0 +1,23 @@
+<view class='tab'>
+  <view class="{{nowTab == 0? 'active' : 'active2'}}" data-id="0" bindtap='tableTab'>今日查询</view>
+  <view class="{{nowTab == 1? 'active' : 'active2'}}" data-id='1' bindtap='tableTab'>本周查询</view>
+</view>
+<view class='card'>
+  <block wx:for="{{nowData}}" wx:key="index">
+    <view class='list' style="background-color:{{item.type == 'NOON'? cardBg.bgc : item.type == 'MORNING'? cardBg2.bgc : cardBg3.bgc}}">
+      <view class='title' style="color: {{item.type == 'NOON'? cardBg.color : item.type == 'MORNING'? cardBg2.color : cardBg3.color}}">{{item.type2}}</view>
+      <view class='content'>
+        <view>
+          <view class='left'>姓名:</view>
+          <view>{{item.name}}</view>
+        </view>
+        <block wx:for="{{item.data2}}" wx:key="index2">
+          <view>
+            <view class='left'>{{item.name}}:</view>
+            <view>{{item.value}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

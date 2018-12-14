@@ -1,0 +1,21 @@
+<import src="../../compoment/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<form bindsubmit="formSubmit">
+  <view class='registBox'>
+    <view>
+      <view class='left'>手  机</view>
+      <view class='right'>
+        <input name="mobile" type='number' bindinput='mobileChange' placeholder='您的手机号码'></input>
+        <view class='invat' bindtap='getInvat' style="background-color: {{canGetInvat == true? '#87CEFA' : '#d5d5d5'}}">{{invat}}</view>
+      </view>
+    </view>
+    <view>
+      <view class='left'>验证码</view>
+      <view class='right'>
+        <input name="secretcode" bindinput='secretcodeChange' type='number' placeholder='请输入验证码'></input>
+      </view>
+    </view>
+  </view>
+  <button class='submit' style="background-color: {{canSubmit == true? '#6899f8' : '#e5e5e5'}}" formType="submit">注  册</button>
+</form>
+<view class='warning'>点击上面的“注册”按钮，即表示你同意<view bindtap='serviceBook'>《博顿教育软件许可及服务协议》</view></view>

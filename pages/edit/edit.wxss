@@ -1,0 +1,54 @@
+@import '../attSeconds/attSeconds.wxss';
+
+.check input{
+  width: 100%;
+  height: 100%;
+}
+
+.name .check{
+  background-color: #D4F2B4;
+}
+
+.check2{
+  background-color: #DBFCF5 !important;
+}
+
+.circleG{
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #D4F2B4;
+  margin-right: 10rpx;
+}
+
+.circleB{
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #DBFCF5;
+  margin-right: 10rpx;
+}
+
+.headimg{
+  width: 480rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.headimg view{
+  width: 200rpx;
+  height: 200rpx;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.headimg view:nth-child(2){
+  border-radius: 20rpx;
+}
+
+.nowImg{
+  border-radius: 50%;
+  border: 1px solid #D4F2B4;
+}

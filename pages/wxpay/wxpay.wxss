@@ -1,0 +1,30 @@
+/* pages/wxpay/wxpay.wxss */
+.moneyInput{
+  border: 1px solid #f2f2f2;
+  font-size: 28rpx;
+}
+
+.submit{
+  padding: 20rpx;
+  color: #ffffff;
+  border-radius: 10rpx;
+  background-color: #6899f8;
+}
+
+.submit2{
+  padding: 20rpx;
+  color: #ffffff;
+  border-radius: 10rpx;
+  background-color: #74f868;
+  margin-top: 40rpx;
+}
+
+.codeInput{
+  border: 1px solid #d9d9d9;
+  padding: 5px;
+}
+
+.money{
+  font-size: 60rpx;
+  margin: 40rpx 0;
+}

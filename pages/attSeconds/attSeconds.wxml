@@ -1,0 +1,47 @@
+<!-- <form class='bigForm' report-submit='true' bindsubmit='getFormId'> -->
+  <!-- <button class='btn' form-type='submit'> -->
+    <!-- <view> -->
+      <form report-submit='true' bindsubmit='submit'>
+        <view class='box'>
+          <view class='name'>
+            <text>姓名</text>
+            <view class='check'>
+              <view class="section">
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                  <view class="picker">
+                    {{studentInfo == ''? '' : studentInfo[index].name}}
+                  </view>
+                </picker>
+              </view>
+            </view>
+          </view>
+          <view class='time'>
+            <text>时间</text>
+            <view class='check'>
+              <view class="section">
+                <picker mode="multiSelector" value="{{leaveTime.dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{leaveTime.dateTimeArray1}}">
+                  <view class="tui-picker-detail">
+                    {{leaveTime.leavetime}}
+                  </view>
+                </picker>
+              </view>
+            </view>
+          </view>
+          <view class='temperature'>
+            <text>体温</text>
+            <view class='check'>
+              <view class="section">
+                <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+                  <view class="picker">
+                    {{multiArray[0][multiIndex[0]]}}.{{multiArray[1][multiIndex[1]]}} ℃
+                  </view>
+                </picker>
+              </view>
+            </view>
+          </view>
+          <button class='submit' form-type='submit'>添加</button>
+        </view>
+      </form>
+    <!-- </view> -->
+  <!-- </button> -->
+<!-- </form> -->

@@ -1,0 +1,2 @@
+/* pages/cookBook/cookBook.wxss */
+@import "../../compoment/list/list.wxss"

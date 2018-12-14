@@ -1,0 +1,35 @@
+
+<view class="banner">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" data-index='{{index}}' bindtap='ImgTap' class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- <view class='split'></view> -->
+<view class='topNav'>
+  <block wx:for="{{topTab}}" wx:key="index">
+    <form report-submit='true' bindsubmit='go2' data-id="{{index}}">
+      <button class='tap' form-type='submit'>
+        <view style="background-image: url({{item.imageSrc}})">
+          <view wx:if="{{item.count && item.count > 0}}" class='count'></view>
+          <text class='tit'>{{item.title1}}</text>
+          <text class='tit'>{{item.title2}}</text>
+        </view>
+      </button>
+    </form>
+  </block>
+</view>
+<view class='nav'>
+  <view class='navList' wx:for="{{nav}}" wx:key="index">
+    <form report-submit='true' bindsubmit='go' data-id="{{index}}">
+      <button class='tap' form-type='submit'>
+        <view wx:if="{{item.count && item.count > 0}}" class='count'></view>
+        <image src='{{item.imageSrc}}'></image>
+        <text>{{item.text}}</text>
+      </button>
+    </form>
+  </view>
+</view>
